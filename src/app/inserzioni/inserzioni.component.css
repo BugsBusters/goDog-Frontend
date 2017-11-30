@@ -1,0 +1,32 @@
+#searchWrapper1 {
+    visibility: visible;
+}
+#searchWrapper1 form {
+    position: relative;
+    height: 70px;
+
+}
+#searchWrapper1 form input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(229,48,49,0.2);
+    border-radius: 5px;
+    padding: 0 95px 0 20px;
+    background: rgba(240,240,240,0.5);
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    display: inline;
+}
+#searchWrapper1 form input:focus {box-shadow: 0px 0px 18px -3px rgba(229,48,49,0.7);}
+#searchWrapper1 form button {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 90px;
+    height: 100%;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 0 5px 5px 0;
+    background: #d35400;
+}

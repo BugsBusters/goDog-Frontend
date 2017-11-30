@@ -13,6 +13,7 @@ import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {PriceTableComponent } from './price-table/price-table.component';
+import { InserzioniComponent } from './inserzioni/inserzioni.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,10 @@ const routes: Routes = [
         path: 'reg',
         component: SignUpComponent
     },
+    {
+        path: 'inserzioni',
+        component: InserzioniComponent
+    },
 ];
 
 @NgModule({
@@ -52,7 +57,8 @@ const routes: Routes = [
         LoginComponent,
         IndexComponent,
         FooterComponent,
-        PriceTableComponent
+        PriceTableComponent,
+        InserzioniComponent
 
     ],
     imports: [
