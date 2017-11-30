@@ -23,6 +23,10 @@ const routes: Routes = [
         path: 'contatti',
         component: ContattiComponent
     },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
 ];
 
 @NgModule({
