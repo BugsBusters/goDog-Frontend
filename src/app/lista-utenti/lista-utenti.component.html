@@ -5,35 +5,33 @@
         <div class="span4 mq-box container">
             <div class="price-plan plan-regular text-center text-light text-shadow-dark"><!-- regular plan -->
 
-                <h3 class="plan-title text-light">Utente semplice</h3>
+                <h3 class="plan-title text-light">Dog Lover</h3>
                 <div class="col-md-12 col-md-offset-3 text-center">
                     <img src="assets/images/icone/user.svg" style="width: 50%" alt="image">
                 </div>
-
+                <br>
                 <ul class="plan-features list-style-none">
-                    <li><strong>Up to 5</strong> Documents</li>
-                    <li><strong>Up to 3</strong> Reviews</li>
-                    <li><strong>5 team</strong> Members</li>
-                    <li><strong>Limited</strong> Support</li>
+                    <li><strong>Cerca le strutture</strong> nelle tue zone di interesse</li>
+                    <li><strong>Offri o richiedi </strong>un servizio da pet-sitter </li>
+                    <li>Condividi <strong>zone di interesse</strong> con gli altri utenti</li>
                 </ul>
-                <a href="#signup" class="btn btn-large btn-inverse">Registrati</a>
+                <a [routerLink]="['/registrazione','utente','0']" class="btn btn-large btn-inverse">Registrati</a>
 
             </div><!-- regular plan end -->
         </div>
         <div class="span4 mq-box container"><!-- plan 2 wrap -->
             <div class="price-plan plan-gold text-center text-light text-shadow-dark"><!-- gold plan -->
 
-                <h3 class="plan-title text-light">Servizi</h3>
+                <h3 class="plan-title text-light">Struttura</h3>
                 <div class="col-md-12 col-md-offset-3 text-center">
                     <img src="assets/images/icone/hotel.svg" style="width: 50%" alt="image">
                 </div>
                 <ul class="plan-features list-style-none">
-                    <li><strong>Unlimited</strong> Documents</li>
-                    <li><strong>Unlimited</strong> Reviews</li>
-                    <li><strong>Unlimited</strong> Members</li>
-                    <li><strong>Unlimited</strong> Support</li>
+                    <li><strong>Pubblicizza</strong> le tue attività professionali</li>
+                    <li><strong>Ricevi contatti </strong> da potenziali clienti </li>
+                    <li>Migliora la tua  <strong>visibilità</strong></li>
                 </ul>
-                <a href="#signup" class="btn btn-large btn-inverse">Registrati</a>
+                <a [routerLink]="['/registrazione','struttura']" class="btn btn-large btn-inverse">Registrati</a>
 
             </div><!-- gold plan end -->
         </div>
@@ -45,12 +43,11 @@
                     <img src="assets/images/icone/veterinary.svg" style="width: 50%"  alt="image">
                 </div>
                 <ul class="plan-features list-style-none">
-                    <li><strong>Up to 15</strong> Documents</li>
-                    <li><strong>Up to 10</strong> Reviews</li>
-                    <li><strong>25 team</strong> Members</li>
-                    <li><strong>Unlimited</strong> Support</li>
+                    <li><strong>Pubblicizza</strong> le tue attività professionali</li>
+                    <li><strong>Ricevi contatti </strong> da potenziali clienti </li>
+                    <li>Migliora la tua  <strong>visibilità</strong></li>
                 </ul>
-                <a href="#signup" class="btn btn-large btn-inverse">Registrati</a>
+                <a [routerLink]="['/registrazione','veterinario']" class="btn btn-large btn-inverse">Registrati</a>
 
             </div><!-- advanced plan end -->
         </div>

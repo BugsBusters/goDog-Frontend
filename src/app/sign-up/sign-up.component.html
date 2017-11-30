@@ -4,17 +4,18 @@
             <div class="col-md-8 col-xs-12 col-md-offset-2 ">
                 <div class="contact-form">
                     <div class="text-center"><h5>Registrati</h5></div>
-                    <form class="form-validation" autocomplete="off">
-                        <input type="text" placeholder="Nome" name="nome">
-                        <input type="text" placeholder="Cognome" name="cognome">
-                        <input type="text" placeholder="Data di nascita" name="data">
-                        <input type="email" placeholder="Email" name="email">
-                        <input type="password" placeholder="Password" name="password">
-                        <button class="hvr-float-shadow">Registrati</button>
+                    <form class="form-validation" autocomplete="off" (ngSubmit)="onSubmit(form)" method="post" #form="ngForm">
+                        <input type="text" placeholder="Nome" name="name" ngModel>
+                        <input type="text" placeholder="Cognome" name="cognome" ngModel>
+                        <input type="email" placeholder="Email" name="email" ngModel>
+                        <input type="password" placeholder="Password" name="password" ngModel>
+                        <button type="submit" class="hvr-float-shadow">Registrati</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
     <br>
 </section>

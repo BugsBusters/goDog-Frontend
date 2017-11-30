@@ -12,7 +12,9 @@ import {LoginComponent} from './login/login.component';
 import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
-import {PriceTableComponent } from './price-table/price-table.component';
+import {ListaUtentiComponent } from './lista-utenti/lista-utenti.component';
+import { PricelistComponent } from './pricelist/pricelist.component';
+import {UtenteService} from "./service/utente.service";
 
 
 const routes: Routes = [
@@ -29,15 +31,15 @@ const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: 'registrati',
-        component: SignUpComponent
+        path: 'registrazione',
+        component: ListaUtentiComponent
     },
     {
-        path: 'price',
-        component: PriceTableComponent
+        path: 'registrazione/:tipo',
+        component: PricelistComponent
     },
     {
-        path: 'reg',
+        path: 'registrazione/:tipo/:piano',
         component: SignUpComponent
     },
 ];
@@ -52,7 +54,8 @@ const routes: Routes = [
         LoginComponent,
         IndexComponent,
         FooterComponent,
-        PriceTableComponent
+        ListaUtentiComponent,
+        PricelistComponent
 
     ],
     imports: [
@@ -61,7 +64,9 @@ const routes: Routes = [
         HttpModule,
         RouterModule.forRoot(routes),
     ],
-    providers: [],
+    providers: [
+        UtenteService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

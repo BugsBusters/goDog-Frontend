@@ -34,20 +34,11 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li routerLinkActive="active current-page-item Active-manu"><a href="#"> Home </a>
-              </li>
+              <li routerLinkActive="active current-page-item Active-manu"><a routerLink="">Home</a></li>
 
-              <li class="dropdown-holder"><a href="#">Servizi</a>
-                <ul class="sub-menu">
-                  <li><a href="gallery-v1.html" class="tran3s">Pet sitter</a></li>
-                  <li><a href="gallery-v2.html" class="tran3s">Hotel</a></li>
-                  <li><a href="gallery-v3.html" class="tran3s">Ristoranti</a></li>
-                  <li><a href="gallery-v3.html" class="tran3s">Veterinari</a></li>
-                  <li><a href="gallery-v3.html" class="tran3s">Lidi</a></li>
-                </ul>
-              </li>
+              <li><a routerLink="inserzioni">Inserzioni</a></li>
 
-              <li><a href="gallery-v3.html">Il tuo amico smarrito</a>
+              <li><a routerLink="amico-smarrito">Il tuo amico smarrito</a>
                 <!--<ul class="sub-menu">-->
                 <!--<li><a href="gallery-v3.html" class="tran3s">About Us</a></li>-->
                 <!--<li><a href="team.html" class="tran3s">Our Team</a></li>-->
@@ -57,11 +48,9 @@
                 <!--</ul>-->
               </li>
 
-              <li class="dropdown-holder"><a href="about-us.html">Chi siamo</a>
-              </li>
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="contatti">Contatti</a></li>
-              <li><a href="#">Registrati</a></li>
-              <li><a routerLink = "login">Login</a></li>
+              <li routerLinkActive="active current-page-item Active-manu"><a routerLink="registrazione">Registrati</a></li>
+              <li routerLinkActive="active current-page-item Active-manu"><a routerLink = "login">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </nav>
