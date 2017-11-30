@@ -19,6 +19,10 @@ const routes: Routes = [
         path: '',
         component: IndexComponent
     },
+    {
+        path: 'contatti',
+        component: ContattiComponent
+    }
 ];
 
 @NgModule({
