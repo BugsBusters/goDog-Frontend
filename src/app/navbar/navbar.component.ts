@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
+import {MatDialogModule, MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,11 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
-    constructor(private route: ActivatedRoute) {
-        console.log(route.url);
+    constructor(public dialog: MatDialog) {
+
     }
+
+   
 
   ngOnInit() {
   }
