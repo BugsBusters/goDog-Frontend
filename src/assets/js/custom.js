@@ -18,6 +18,10 @@
   };
  }
 
+$( ".title" ).click(function() {
+    $(".content").slideToggle();
+});
+
 // placeholder remove
 function removePlaceholder () {
   if ($("input,textarea").length) {
