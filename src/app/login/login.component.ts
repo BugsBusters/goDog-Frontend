@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UtenteService} from "../service/utente.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+    public credenziali = {
+        email: '',
+        password: '',
+    };
 
-  ngOnInit() {
-  }
+    public utente : any;
+
+    constructor(private utenteService: UtenteService) {
+    }
+
+    ngOnInit() {
+    }
+
+    onSubmit(formData) {
+        this.credenziali.email = formData.value.email;
+        this.credenziali.password = formData.value.password;
+        console.log(this.credenziali)
+        this.utenteService.login(this.credenziali)
+            .subscribe(
+                (response) => {
+                    this.utente = JSON.parse(response['_body']);
+                    console.log(this.utente);
+                },
+                (error) => console.log(error)
+            );
+    }
 
 }

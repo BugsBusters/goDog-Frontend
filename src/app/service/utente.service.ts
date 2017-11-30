@@ -27,4 +27,10 @@ export class UtenteService {
         this.headers.append('Content-Type', 'application/json: charset=utf-8');
         return this.http.post(this.baseUrl + 'register', utente, this.headers);
     }
+
+    login(utente : any) {
+        this.headers = new Headers();
+        this.headers.append('Content-Type', 'application/json: charset=utf-8');
+        return this.http.post(this.baseUrl + 'login', utente, this.headers);
+    }
 }

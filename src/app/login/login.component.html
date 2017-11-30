@@ -5,9 +5,9 @@
             <div class="col-md-8 col-md-offset-2 col-xs-12">
                 <div class="contact-form">
                     <div class="text-center"><h5>Login</h5></div>
-                    <form class="form-validation" autocomplete="off">
-                        <input type="email" placeholder="Il tuo indirizzo email *" name="email">
-                        <input type="password" placeholder="Password" name="password">
+                    <form class="form-validation" autocomplete="off" (ngSubmit)="onSubmit(form)" method="post" #form="ngForm">
+                        <input type="email" placeholder="Il tuo indirizzo email *" name="email" ngModel>
+                        <input type="password" placeholder="Password" name="password" ngModel>
                         <button class="hvr-float-shadow">Effettua il login</button>
                     </form>
                 </div>
