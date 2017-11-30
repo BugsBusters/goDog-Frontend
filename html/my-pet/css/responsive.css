@@ -1,0 +1,184 @@
+/* Responsive CSS Document */
+
+/*
+    Created on   : 11/08/2017.
+    Theme Name   : myPat.
+    Description  : myPat- Responsive html5 template.
+    Version      : 1.0.
+    Author       : @Unifytheme.
+    Developed by : @Unifytheme.
+*/
+
+@media (min-width: 992px) {
+	.container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+/*(max-width: 992px)*/
+@media (max-width: 1199px) {
+	.main-menu .navbar-nav >li>a {padding: 0 15px;}
+	.company-history-containt-opact .history-item.item-four {float: none !important;}
+	.company-history-containt-opact .col-item-three {padding: 0 15px;}
+	.company-history-containt-opact .history-item {width: 295px; margin: 20px auto;}
+	.banner-bottom-version-two {-webkit-transform: translateY(-20%); transform: translateY(-20%);}
+	.faq-page .request-form {padding-left: 0;}
+}
+/*(max-width: 1199px)*/
+@media (max-width: 991px) {
+	/*========  Theme Menu  =========*/
+	.navbar {float: left !important; line-height: 130px;}
+	.theme-main-menu .main-menu .them-logo {float: right; width: calc(100% - 220px); text-align: center;}
+	.main-menu {position: relative;}
+	.navbar {position: static;}
+	.main-menu .navbar-collapse {position: absolute; left: 0; right: 0; width: 100%; float: none; border: none;}
+	.main-menu .navbar-nav {padding-right: 5px; padding-left: 5px; background: rgba(0,0,0,0.8); margin-top: 0; max-height: 300px; overflow-y: auto;}
+    .navbar-nav,.navbar-nav>li,.navbar-header,.theme-main-menu .navbar-toggle {float: none;}
+	.navbar-collapse.collapse{display: none !important;}
+    .navbar-collapse.collapse.in,.navbar-toggle{display: block !important;}
+    .theme-main-menu.fixed .main-menu .navbar-nav >li a {line-height: 35px;}
+	.main-menu .navbar-nav >li a {line-height: 35px; border-right: none; color: #fff;}
+	.main-menu .navbar-nav >li.active,
+	.main-menu .navbar-nav>li:hover {background: #fff;}
+	.main-menu .navbar-nav>li.dropdown-holder .sub-menu { 
+		-webkit-transition: none;
+		   -moz-transition: none;
+			-ms-transition: none;
+			 -o-transition: none;
+				transition: none;
+		opacity: 1; visibility: visible; position: static; box-shadow: none; width: 100%; display: none; margin-top: 5px;
+		-webkit-transform: scaleY(1);
+		   -moz-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			 -o-transform: scaleY(1);
+				transform: scaleY(1);
+	}
+	.main-menu .navbar-nav>li.dropdown-holder .sub-menu>li>a {line-height: 40px;}
+    .main-menu nav ul li.dropdown-holder .fa {display: block;}
+  	.main-menu .nav>li>a {padding: 0 5px; }
+	.main-menu .nav>li {margin: 5px 0;}
+	/*====*/
+	#theme-main-banner .camera_caption .container h1 {font-size: 60px;}
+	#theme-main-banner .camera_caption .container span {margin-top: 30px;}
+	.our-pet-health-section .our-work-process {margin-bottom: 80px;}
+	.partners-section {padding: 0 0 25px;}
+	footer .top-footer [class*="col-"] {margin-bottom: 70px;}
+	footer .bottom-footer {margin-top: 0 !important; text-align: center;}
+	footer .bottom-footer p, footer .bottom-footer form {float: none !important;}
+	footer .bottom-footer form {width: 100%; margin: 20px 0 0 0;}
+	footer .bottom-footer p {margin-top: 0;}
+	.margin-we-are-myPet {margin-top: 50px;}
+	.about-us-we-are-my-pet .about-us-dog-years>div {margin-bottom: 40px;}
+	.about-us-client-slider {margin-bottom: 50px !important;}
+	.services-details .your-pets-receive-care {margin-bottom: 80px;}
+	.services-details-help {padding: 95px 35px 75px;}
+	.services-details-help h3 {font-size: 30px;}
+	.testimonial-section>.opacity .testimonial-slider>div.row>div:last-child {margin-bottom: 0;}
+	.testimonial-section .inner-title-one {margin: 100px 0 80px;}
+	.blog-details-leave-a-comment {margin-bottom: 70px;}
+	.contact-us .get-in-touch-with-us {padding-left: 0; padding-bottom: 0;}
+	.contact-us {margin-top: 0;}
+	.faq-page .request-form {margin-top: 100px;}
+	.error-page .error-page-text .top-png {top: 0; left: 23%;}
+	.error-page .error-page-text .bottom-png {bottom: 0; right: 0;}
+	.we-are-my-pet-section .we-are-my-pet-text>a {margin-bottom: 60px;}
+}
+/*(max-width: 991px)*/
+@media (max-width: 767px) {
+	.top-header .top-header-right,
+	.top-header .top-header-left {float: none !important; text-align: center; padding: 10px;}
+	.top-header .top-header-left {padding-bottom: 0;}
+	.banner-bottom-version-two {-webkit-transform: translateY(0%); transform: translateY(0%); margin-bottom: 100px;}
+	.pet-services-v-one {margin-top: 0;}
+	.pet-services-v-one .our-pet-services>div:last-child > .our-pet-services-item {margin-bottom: 0 !important;}
+	.services-details-title>h3>span {display: block; margin-left: 0; max-width: 370px; width: 100%;}
+	.services-details-help {margin-bottom: 0!important;}
+	.gallery-v-two-wrapper .gallery_item_wrapper>.grid-sizer,
+	.gallery-v-two-wrapper .gallery_item_wrapper>.isotop-item {width: 100%;}
+	.gallery-v-three-wrapper .gallery_item_wrapper>.grid-sizer,
+	.gallery-v-three-wrapper .gallery_item_wrapper>.isotop-item {width: 50%;}
+	.shop-page .top-select-and-form-section p {text-align: left;}
+	.shop-page {margin: 80px 0;}
+	.single-product-details .product-order-img {margin-bottom: 70px;}
+	.single-product-details .review-tab .nav-tabs > li {display: block !important; float: none;}
+	.single-product-details .review-tab .nav-tabs > li > a {text-align: center; line-height: 40px;}
+	.single-product-details .related-product .related-product-item {margin-bottom: 40px;}
+	.shop-page-details {margin: 80px 0;}
+	.contact-us .get-in-touch-with-us {margin-top: 30px;}
+	.error-page .error-page-text h2 {letter-spacing: 20px;}
+	.error-page .error-page-text a {margin-right: 30%;}
+	.client-slider {margin: 70px 0;}
+	#theme-main-banner .camera_prev > span:before,#theme-main-banner .camera_next > span:before {display: none;}
+	.testimonial-section {margin: 0;}
+	.them-inner-banner .inner-banner-opact .inner-banner-title a {float: none;margin-top: 45px;}
+	.them-inner-banner .inner-banner-opact .inner-banner-title {padding-top: 65px;}
+	.banner-bottom-item>.banner-bottom-contante {height: 260px;}
+	.banner-bottom-item>.banner-bottom-contante>i {line-height: 160px;}
+}
+/*(max-width: 767px)*/
+@media (max-width: 650px) {
+	.company-history-containt-opact .history-item-weight {width: 100% !important;}
+	.company-history-containt-opact {padding: 100px 0 60px;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption>div {padding-top: 60px;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption .container h1 {font-size: 45px; line-height: 60px;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption .container span {margin-top: 20px;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption .container p {font-size: 25px; margin-bottom: 50px;}
+}
+/*(max-width: 650px)*/
+@media (max-width: 600px) {
+	.our-pet-services .our-pet-services-item-width {width: 100% !important;}
+	.our-team-section .team-item-width {width: 100%;}
+	.blog-details-comments-section>ul>li>ul {padding-left: 40px;}
+	.blog-details-comments-section>ul>li>ul>li,
+	.blog-details-comments-section>ul>li>div {padding: 0 0 30px 95px;}
+	.blog-details-comments-section>ul>li>ul>li>img,
+	.blog-details-comments-section>ul>li>div>img {width: 75px; height: 80px;}
+	.blog-details-tag-item>ul,
+	.blog-details-tag-item>a {float: none;}
+	.blog-details-tag-item {text-align: center;}
+	.blog-details-tag-item>a {margin-top: 15px;}
+	.shop-item-wrapper .product-item-width {width: 100%;}
+	.shop-item-wrapper .product-item-width .shop-item-product-wrapper {max-width: 400px; margin: 0 auto 30px;}
+	.error-page .error-page-text a {margin-right: 0; margin-top: 50px;}
+	.error-page .error-page-text .bottom-png {bottom: -80px;}
+}
+/*(max-width: 600px)*/
+@media (max-width: 550px) {	
+	.top-header .top-header-left li {margin-right: 0; display: block; line-height: 25px;}
+	.gallery-v-one .gallery-item-width {width: 100% !important;}
+}
+/*(max-width: 550px)*/
+@media (max-width: 500px) {
+	#search-button {width: 45px;}
+	.cart {width: 50px; margin-right: 5px;}
+	.cart span {right: 4px;}
+	.theme-main-menu .main-menu .them-logo {width: calc(100% - 141px);}
+	#theme-main-banner .camera_caption .container h1 {font-size: 45px; line-height: 60px;}
+	#theme-main-banner .camera_caption .container span {margin-top: 20px;}
+	#theme-main-banner .camera_caption .container p {font-size: 25px; margin-bottom: 50px;}
+	.blog-details-comments-section>ul>li>ul>li>span,
+	.blog-details-comments-section>ul>li>div>span {display: block; margin-top: 5px;}
+	#review .single-review>img {float: none; display: block; margin-bottom: 20px;}
+	#review .single-review .text {width: 100%; float: none; padding-left: 0;}
+}
+/*(max-width: 500px)*/
+@media (max-width: 480px) {
+	#theme-main-banner .camera_caption .container>a.banner-button-left,
+	#theme-main-banner .camera_caption .container>a {display: block; margin: 0 auto !important;}
+	#theme-main-banner .camera_caption .container>a.banner-button-left {margin-bottom: 30px !important;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption .container>a.banner-button-left {margin-bottom: 10px !important;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption .container a {line-height: 40px;}
+	#theme-main-banner.theme-main-banner-v-two .camera_caption>div {padding-top: 80px;}
+	.gallery-v-three-wrapper .gallery_item_wrapper>.grid-sizer,
+	.gallery-v-three-wrapper .gallery_item_wrapper>.isotop-item {width: 100%;}
+	.faq-page .request-form>form {padding: 50px 15px;}
+	.faq-page {margin: 100px 0;}
+}
+/*(max-width: 480px)*/
+@media (max-width: 380px) {
+	.theme-main-menu .main-menu .them-logo>a {width: 90px;}
+	.company-history-containt-opact .history-item {max-width: 295px; width: auto;}
+	.our-pet-health-section .our-work-process>div.row>div {width: 100% !important;}
+	.our-pet-health-section .our-work-process>div.row>div:nth-of-type(1) {margin-bottom: 30px;}
+}
+/*(max-width: 380px)*/
