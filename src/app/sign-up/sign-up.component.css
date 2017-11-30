@@ -1,0 +1,102 @@
+.registrati
+.registrati .contact-form,
+.registrati .get-in-touch-with-us {padding-top: 80px; padding-bottom: 40px;}
+.registrati .contact-form h5,
+.registrati .get-in-touch-with-us h5 {
+    font-size: 28px;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: solid 1px #d35400;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+.registrati .contact-form>form {padding-top: 20px;}
+.registrati .contact-form>form>textarea,
+.registrati .contact-form>form>input {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 35px;
+    border: none;
+    border-bottom: solid 1px #c5c3c3;
+    font-family: 'Yrsa', serif;
+    font-size: 18px;
+}
+.registrati .contact-form>form>textarea {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 82px 0 10px 0;
+    max-height: 120px;
+    min-height: 120px;
+}
+.registrati .contact-form>form>button {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: #d35400;
+    border-radius: 25px;
+    font-family: 'Yrsa', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.registrati .get-in-touch-with-us {
+    position: relative;
+    padding-left: 100px;
+}
+.registrati .get-in-touch-with-us:before {
+    content: "\f10e";
+    font-family: Flaticon;
+    font-size: 150px;
+    color: #f1f0f0;
+    line-height: 120px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+.registrati .get-in-touch-with-us>p {
+    color: #121212;
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+.registrati .get-in-touch-with-us>ul>li {
+    position: relative;
+    padding-left: 85px;
+    margin-bottom: 40px;
+    min-height: 65px;
+}
+.registrati .get-in-touch-with-us>ul>li:last-child {margin-bottom: 0;}
+.registrati .get-in-touch-with-us>ul>li>img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.registrati .get-in-touch-with-us>ul>li>h6 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.registrati .get-in-touch-with-us>ul>li>span {
+    display: block;
+    color: rgba(0,0,0,0.7);
+    line-height: 35px;
+}
+.registrati .get-in-touch-with-us>ul>li:last-child>span:last-child {color: #d35400;}
+.registrati .contact-map .icon-img {position: relative; padding-top: 70px;}
+.registrati .contact-map .icon-img:before {
+    content: "\f10c";
+    font-family: Flaticon;
+    font-size: 200px;
+    color: #f1f0f0;
+    line-height: 120px;
+    position: absolute;
+    top: -88px;
+    left: -70px;
+    z-index: -1;
+}
+.registrati .contact-map>#map {width: 100%; height: 500px;}
+.si-content h5{margin-bottom: 10px;}
+.si-has-border .si-content-wrapper {border: none;}
+.si-shadow-wrapper-top {opacity: 0;}

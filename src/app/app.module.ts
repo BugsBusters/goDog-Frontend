@@ -36,6 +36,10 @@ const routes: Routes = [
         path: 'price',
         component: PriceTableComponent
     },
+    {
+        path: 'reg',
+        component: SignUpComponent
+    },
 ];
 
 @NgModule({
