@@ -12,6 +12,7 @@ import {LoginComponent} from './login/login.component';
 import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
+import {PriceTableComponent } from './price-table/price-table.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,14 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'registrati',
+        component: SignUpComponent
+    },
+    {
+        path: 'price',
+        component: PriceTableComponent
     },
     {
         path: 'reg',
@@ -43,6 +52,8 @@ const routes: Routes = [
         LoginComponent,
         IndexComponent,
         FooterComponent,
+        PriceTableComponent
+
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,137 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-family:verdana;
+}
+
+section
+{
+    width:1210px;
+    margin:0 auto;
+}
+
+.span4 {
+    width: 370px;
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+}
+
+.plan-regular {
+    background-color: #f1ad8d;
+}
+
+.price-plan {
+    border-radius: 4px;
+    padding: 40px 20px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+
+.price-plan .plan-title {
+    margin: 0 0 20px 0;
+}
+h1, h2, h3 {
+    letter-spacing: -0.05em;
+}
+
+.text-light {
+    color: #FFF;
+}
+
+.price-plan .price {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.18);
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.price-plan .amount-container {
+    padding: 35px 0 0;
+}
+
+.price-plan .currency {
+    left: -7px;
+    line-height: 14px;
+    position: relative;
+    top: -8px;
+}
+
+.price-plan .amount {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 0 -10px;
+}
+
+.price-plan .period {
+    font-size: 12px;
+    line-height: 14px;
+    margin: -3px 0 0;
+}
+
+.text-shadow-dark {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+.text-center {
+    text-align: center;
+}
+
+.price-plan .plan-features {
+    list-style: none outside none;
+    margin: 20px 0 30px;
+    padding: 0px;
+}
+
+li {
+    line-height: 30px;
+}
+
+a {
+    background-color: #424242;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 11px 19px;
+    font-size: 17.5px;
+    color:#fff;
+    text-decoration:none;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+
+a:hover
+{
+    background:#000;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+.plan-gold {
+    background-color: #ec8d5f;
+}
+.plan-advanced {
+    background-color: #e76c32;
+}
+
+.plan-sitting {
+    background-color: #cd5218;
+}
+
+.price-plan:hover
+{
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
