@@ -183,20 +183,20 @@ $(function() {
         zoom: 14,
         styles: mapStyle,
         scrollwheel: false,
-        center: new google.maps.LatLng(40.72, -74)
+        center: new google.maps.LatLng(43.586725, 13.516790)
     });
 
     // Add a marker
     var marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(40.72, -74)
+        position: new google.maps.LatLng(43.586725, 13.516790)
     });
 
     // Add a Snazzy Info Window to the marker
     var info = new SnazzyInfoWindow({
         marker: marker,
-        content: '<h5>My Pet House </h5>' +
-                 '<p>San Francisco, CA 560 Bush St &amp; 20th Ave, Apt <br>5 San Francisco, 230909</p>',
+        content: '<h5>goDog </h5>' +
+                 '<p>Via Brecce Bianche, 12 <br>Ancona, AN</p>',
         closeOnMapClick: false
     });
     info.open();
