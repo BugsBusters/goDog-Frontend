@@ -195,7 +195,7 @@ $(function() {
     // Add a Snazzy Info Window to the marker
     var info = new SnazzyInfoWindow({
         marker: marker,
-        content: '<h5>goDog </h5>' +
+        content: '<img  src="images/them-logo/them-main-logo-1.png">' +
                  '<p>Via Brecce Bianche, 12 <br>Ancona, AN</p>',
         closeOnMapClick: false
     });
