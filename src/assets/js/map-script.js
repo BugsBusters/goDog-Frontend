@@ -200,5 +200,4 @@ $(function() {
         '<p>Via Brecce Bianche, 12 <br>Ancona, AN</p>',
         closeOnMapClick: false
     });
-    info.open();
 });
