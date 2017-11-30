@@ -2422,4 +2422,8 @@ footer .bottom-footer form button {
 	background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
+
+.modal-footer {
+	display:none;
+}
 /*-------------------------------------------------------------------------------------------------------------*/

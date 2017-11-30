@@ -42,13 +42,13 @@ const routes: Routes = [
         NavbarComponent,
         LoginComponent,
         IndexComponent,
-        FooterComponent
+        FooterComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
     ],
     providers: [],
     bootstrap: [AppComponent]
