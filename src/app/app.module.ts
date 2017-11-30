@@ -12,9 +12,10 @@ import {LoginComponent} from './login/login.component';
 import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
-import {ListaUtentiComponent } from './lista-utenti/lista-utenti.component';
-import { PricelistComponent } from './pricelist/pricelist.component';
+import {ListaUtentiComponent} from './lista-utenti/lista-utenti.component';
+
 import {UtenteService} from "./service/utente.service";
+import {PricelistComponent} from "./pricelist/pricelist.component";
 
 
 const routes: Routes = [
