@@ -34,7 +34,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li routerLinkActive="active current-page-item Active-manu"><a routerLink="">Home</a></li>
+              <li routerLinkActive="active current-page-item Active-manu"><a href="#">Home</a></li>
 
               <li routerLinkActive="active current-page-item Active-manu" *ngIf="isLogged"><a routerLink="inserzioni">Trova Strutture</a></li>
 
@@ -43,7 +43,8 @@
               </li>
 
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="contatti">Contatti</a></li>
-              <li routerLinkActive="active current-page-item Active-manu"><a routerLink="registrazione">Registrati</a></li>
+              <li *ngIf="!isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink="registrazione">Registrati</a></li>
+              <li *ngIf="isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink="home">Area riservata</a></li>
               <li *ngIf="!isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink = "login">Login</a></li>
               <li *ngIf="isLogged"><a routerLink = "logout">Logout</a></li>
             </ul>
