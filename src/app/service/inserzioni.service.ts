@@ -35,9 +35,40 @@ export class InserzioniService {
             );
     }
 
-    getInserzioniByTipo(tipo,token)
-    {
+    getInserzioniByTipo(tipo, token) {
         return this.http.get(this.baseUrl + 'inserzioni/' + tipo + this.tokenUrl + token)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+
+    getInserzioniByCitta(tipo, token, citta) {
+        return this.http.get(this.baseUrl + 'inserzione-lookup' + this.tokenUrl + token + "&tipo=" + tipo + "&citta=" + citta)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+
+    getInserzioniByProvincia(tipo, token, citta) {
+        return this.http.get(this.baseUrl + 'inserzione-lookup' + this.tokenUrl + token + "&tipo=" + tipo + "&provincia=" + citta)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+    getInserzioniByRegione(tipo, token, citta) {
+        return this.http.get(this.baseUrl + 'inserzione-lookup' + this.tokenUrl + token + "&tipo=" + tipo + "&regione=" + citta)
             .map(
                 (response) => {
                     const data: any[] = response.json();

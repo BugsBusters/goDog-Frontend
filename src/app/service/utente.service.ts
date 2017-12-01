@@ -8,7 +8,7 @@ export class UtenteService {
     public headers;
     private baseUrl = 'http://193.205.129.103/backend/api/';
     private tokenUrl = '?api_token=';
-
+    public utente : any;
 
 
     constructor(private http: Http) {
@@ -24,6 +24,7 @@ export class UtenteService {
                 }
             );
     }
+
 
     register(utente: any) {
         this.headers = new Headers();

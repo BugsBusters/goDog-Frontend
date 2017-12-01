@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
 import {UtenteService} from "../service/utente.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
 
 
 
-    constructor(private utenteService: UtenteService) {
+    constructor(private utenteService: UtenteService, private router : Router) {
     }
 
     ngOnInit() {
@@ -32,6 +33,8 @@ export class LoginComponent implements OnInit {
                 (response) => {
                     this.utente = JSON.parse(response['_body']);
                     this.utenteService.token = this.utente.api_token;
+                    this.utenteService.utente = this.utente;
+                    this.router.navigate(['home']);
                 },
                 (error) => console.log(error)
             );

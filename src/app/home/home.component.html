@@ -1,14 +1,52 @@
 <div class="container">
-  <section>
-      <div class="col-md-12">
-          <div class="col-md-4" style="background-color:#a9a9a9">
-
-          </div>
-          <div class="col-md-8">
-              <div class="row">
-                  <h2>Benvenuto UTENTE</h2>
-              </div>
-          </div>
-      </div>
-  </section>
+    <section>
+        <div class="col-md-12">
+            <section class="banner-bottom-section">
+                <div class="container">
+                    <div class="row text-center">
+                        <h1>Benvenuto {{utente.name}} {{utente.cognome}}!</h1>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="banner-bottom-item">
+                                <div class="banner-bottom-contante text-center">
+                                    <i class="flaticon-egyptian-cat"></i>
+                                    <h6><a href="#">Modifica il tuo profilo</a></h6>
+                                    <p>Modifica le informazioni del tuo profilo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="banner-bottom-item">
+                                <div class="banner-bottom-contante text-center">
+                                    <i class="flaticon-dog-training"></i>
+                                    <h6><a [routerLink]="['/inserzioni','pet']">Visualizza annunci</a></h6>
+                                    <p>Richiedi o candidati come un dog-sitter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="banner-bottom-item">
+                                <div class="banner-bottom-contante text-center">
+                                    <i class="flaticon-construction"></i>
+                                    <h6><a [routerLink]="['/inserzioni']">Sei in cerca di una struttura?</a></h6>
+                                    <p>Le strutture migliori per il tuo amico a quattro zampe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="banner-bottom-item">
+                                <div class="banner-bottom-contante text-center">
+                                    <i class="flaticon-pawprint"></i>
+                                    <h6><a [routerLink]="['/inserzioni','veterinari']">Hai bisogno di aiuto immediato?</a></h6>
+                                    <p>Cerca subito un veterinario</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 </div>

@@ -27,21 +27,21 @@
         <table>
             <tr>
                 <td class="col-md-4">
-                    <form action="#">
-                        <input type="text" placeholder="Cerca per Città...">
-                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <form (ngSubmit)="onSubmitCitta(cittaForm)" method="post" #cittaForm="ngForm">
+                        <input type="text" placeholder="Cerca per Città..." name="citta" ngModel>
+                        <button type="submit" class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </td>
                 <td class="col-md-4">
-                    <form action="#">
-                        <input type="text" placeholder="Cerca per Provincia...">
-                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <form (ngSubmit)="onSubmitProvincia(provinciaForm)" method="post" #provinciaForm="ngForm">
+                        <input type="text" placeholder="Cerca per Provincia..." name="provincia" ngModel>
+                        <button type="submit" class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </td>
                 <td class="col-md-4">
-                    <form action="#">
-                        <input type="text" placeholder="Cerca per Regione...">
-                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <form (ngSubmit)="onSubmitRegione(regioneForm)" method="post" #regioneForm="ngForm">
+                        <input type="text" placeholder="Cerca per Regione..." name="regione" ngModel>
+                        <button type="submit" class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </td>
             </tr>
@@ -89,7 +89,7 @@
                             <img *ngIf="inserzione.tipoinserzione_id == 'veterinario'"
                                  style="height:380px" src="assets/images/gallery/veterinario.jpg" alt="image">
                             <div class="gallery-item-opact">
-                                <h5>{{inserzione.contenuto}}</h5>
+                                <h5>{{inserzione.titolo}}</h5>
                                 <div>
                                     <a [routerLink]="['/inserzione',inserzione.id]" class="fancybox"><i
                                             class="flaticon-search"></i></a>
