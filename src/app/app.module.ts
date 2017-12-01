@@ -26,6 +26,7 @@ import {AmicismarritiComponent} from './amicismarriti/amicismarriti.component';
 import { HomeComponent } from './home/home.component';
 
 
+
 const routes: Routes = [
     {
         path: '',
