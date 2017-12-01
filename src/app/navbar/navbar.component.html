@@ -36,22 +36,16 @@
             <ul class="nav navbar-nav">
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="">Home</a></li>
 
-              <li *ngIf="isLogged"><a routerLink="inserzioni">Inserzioni</a></li>
+              <li routerLinkActive="active current-page-item Active-manu" *ngIf="isLogged"><a routerLink="inserzioni">Inserzioni</a></li>
 
-              <li><a routerLink="amico-smarrito">Il tuo amico smarrito</a>
-                <!--<ul class="sub-menu">-->
-                <!--<li><a href="gallery-v3.html" class="tran3s">About Us</a></li>-->
-                <!--<li><a href="team.html" class="tran3s">Our Team</a></li>-->
-                <!--<li><a href="testimonial.html" class="tran3s">Testimonial</a></li>-->
-                <!--<li><a href="faq.html" class="tran3s">Faq</a></li>-->
-                <!--<li><a href="404.html" class="tran3s">Error page</a></li>-->
-                <!--</ul>-->
+              <li routerLinkActive="active current-page-item Active-manu"><a routerLink="amico-smarrito">Il tuo amico smarrito</a>
+
               </li>
 
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="contatti">Contatti</a></li>
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="registrazione">Registrati</a></li>
               <li *ngIf="!isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink = "login">Login</a></li>
-              <li *ngIf="isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink = "logout">Logout</a></li>
+              <li *ngIf="isLogged"><a routerLink = "logout">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </nav>

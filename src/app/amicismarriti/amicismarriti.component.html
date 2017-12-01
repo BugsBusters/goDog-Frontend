@@ -1,0 +1,57 @@
+
+<div class="main-page-wrapper">
+  <!-- Theme Inner Banner ____________________________ -->
+  <section class="">
+    <div class="them-inner-banner">
+      <div class="inner-banner-opact">
+        <div class="container">
+          <div class="inner-banner-title">
+            <div class="row">
+              <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="">
+                  <h1>Hai smarrito il tuo amico a quattro zampe?</h1>
+                  <p>Aggiungi una sua foto per aiutare i membri della comunità a trovarlo, oppure segnala tu stesso
+                    l'avvistamento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+
+  <!-- Gallery V-2 ____________________________ -->
+  <section class="gallery-v-two">
+    <div class="container">
+      <div class="gallery-v-two-wrapper">
+
+
+        <div class="gallery_item_wrapper row" id="isotop-gallery-wrapper">
+          <div class="grid-sizer"></div>
+
+          <!-- Single Item -->
+
+          <div *ngFor="let inserzione of amici"
+               class="col-md-6 isotop-item">
+            <div class="gallery-tiem-wrapper">
+              <img src="assets/images/gallery/doggo.jpg"
+                   style="height:380px" alt="imsge">
+              <div class="gallery-item-opact">
+                <h5>{{inserzione.titolo}}</h5>
+                <div>
+                  <a [routerLink]="['/amico-smarrito',inserzione.id]" class="fancybox"><i
+                          class="flaticon-search"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End of .isotop-item -->
+        </div> <!-- End of .gallery_item_wrapper -->
+      </div> <!-- End of .WORK-item_wrapper -->
+    </div>
+  </section>
+
+</div> <!-- /.main-page-wrapper -->
