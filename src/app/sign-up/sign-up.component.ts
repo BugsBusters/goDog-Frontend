@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UtenteService} from "../service/utente.service";
+import {Router} from "@angular/router";
+
 
 @Component({
     selector: 'app-sign-up',
@@ -19,7 +21,7 @@ export class SignUpComponent implements OnInit {
         plan: 0,
     };
 
-    constructor(private route: ActivatedRoute, private utenteService : UtenteService) {
+    constructor(private route: ActivatedRoute, private utenteService : UtenteService, private router: Router) {
 
     }
 
@@ -40,7 +42,10 @@ export class SignUpComponent implements OnInit {
         this.utente.plan = this.piano;
         this.utenteService.register(this.utente)
             .subscribe(
-                (response) => console.log(response),
+                (response) => {
+                    alert('Registrazione avvenuta con successo!')
+                    this.router.navigate(['login'])
+                },
                 (error) => console.log(error)
             );
 
