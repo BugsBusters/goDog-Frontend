@@ -15,7 +15,6 @@ export class InserzioniService {
         .map(
             (response) => {
                 const data: any[] = response.json();
-                console.log(data);
                 return data;
             },
             (error) => console.log(error)

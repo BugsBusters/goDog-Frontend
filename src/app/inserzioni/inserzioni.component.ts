@@ -16,8 +16,8 @@ export class InserzioniComponent implements OnInit {
   ngOnInit() {
     this.inserzioniService.getInserzioni()
         .subscribe(
-            (response) => console.log(response),
-            (error) => console.log()
+            (response) => this.inserzioni = response,
+            (error) => console.log(error)
         );
 
   }

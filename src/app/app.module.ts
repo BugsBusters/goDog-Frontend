@@ -13,9 +13,10 @@ import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ListaUtentiComponent} from './lista-utenti/lista-utenti.component';
-import {PricelistComponent} from "./pricelist/pricelist.component";
-import {UtenteService} from "./service/utente.service";
-import {InserzioniComponent} from "./inserzioni/inserzioni.component";
+import {PricelistComponent} from './pricelist/pricelist.component';
+import {UtenteService} from './service/utente.service';
+import {InserzioniComponent} from './inserzioni/inserzioni.component';
+import {InserzioniService} from './service/inserzioni.service';
 
 
 
@@ -73,7 +74,8 @@ const routes: Routes = [
         RouterModule.forRoot(routes),
     ],
     providers: [
-        UtenteService
+        UtenteService,
+        InserzioniService
     ],
     bootstrap: [AppComponent]
 })

@@ -13,7 +13,7 @@ export class UtenteService {
 
 
     getUtenti() {
-        return this.http.get(this.baseUrl+'utenti')
+        return this.http.get(this.baseUrl + 'utenti')
             .map(
                 (response) => {
                     const data: any[] = response.json();
@@ -28,7 +28,7 @@ export class UtenteService {
         return this.http.post(this.baseUrl + 'register', utente, this.headers);
     }
 
-    login(utente : any) {
+    login(utente: any) {
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json: charset=utf-8');
         return this.http.post(this.baseUrl + 'login', utente, this.headers);
