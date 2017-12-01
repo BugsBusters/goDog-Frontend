@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 (response) => {
                     this.utente = JSON.parse(response['_body']);
-                    console.log(this.utente);
+                    this.utenteService.token = this.utente.api_token;
                 },
                 (error) => console.log(error)
             );
