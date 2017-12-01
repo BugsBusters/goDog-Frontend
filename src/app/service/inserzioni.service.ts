@@ -11,13 +11,14 @@ export class InserzioniService {
   constructor(private http: Http) { }
 
   getInserzioni() {
-    this.http.get(this.baseUrl + 'inserzioni')
+   return this.http.get(this.baseUrl + 'inserzioni?api_token=jpZwrlF5LaQCWDik8SQAAKXbVVjrhEDbxMPA20yC9F2dKvtjXgTZY3VIzUbr')
         .map(
             (response) => {
                 const data: any[] = response.json();
                 console.log(data);
                 return data;
-            }
+            },
+            (error) => console.log(error)
         );
   }
 }
