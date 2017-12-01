@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class UtenteService {
-
+    public token : string;
     public headers;
     private baseUrl = 'http://193.205.129.103/backend/api/';
 
