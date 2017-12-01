@@ -17,11 +17,9 @@ import {PricelistComponent} from "./pricelist/pricelist.component";
 import {UtenteService} from "./service/utente.service";
 import {InserzioniComponent} from "./inserzioni/inserzioni.component";
 import {InserzioniService} from "./service/inserzioni.service";
-import { LogoutComponent } from './logout/logout.component';
-import { InserzioneComponent } from './inserzione/inserzione.component';
+import {LogoutComponent} from './logout/logout.component';
+import {InserzioneComponent} from './inserzione/inserzione.component';
 import {RecensioneService} from "./service/recensione.service";
-
-
 
 
 const routes: Routes = [
@@ -52,6 +50,10 @@ const routes: Routes = [
     {
         path: 'inserzioni',
         component: InserzioniComponent
+    },
+    {
+        path: 'inserzioni/:tipo',
+        component: InserzioniComponent,
     },
     {
         path: 'inserzione/:id',

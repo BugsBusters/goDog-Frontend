@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
     onSubmit(formData) {
         this.credenziali.email = formData.value.email;
         this.credenziali.password = formData.value.password;
-        console.log(this.credenziali)
         this.utenteService.login(this.credenziali)
             .subscribe(
                 (response) => {

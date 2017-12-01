@@ -1,83 +1,106 @@
 <body>
 
 <div class="main-page-wrapper">
-  <!-- Theme Inner Banner ____________________________ -->
-  <section class="">
-    <div class="them-inner-banner">
-      <div class="inner-banner-opact">
-        <div class="container">
-          <div class="inner-banner-title">
-            <div class="row">
-              <div class="col-sm-12 col-xs-12 col-md-12">
-                <div class="">
-                  <h1>Ricerca tra i nostri servizi quello che fa al caso tuo!</h1>
-                  <p>Offriamo servizi di pet sitting e veterinari, ricerca hotel, ristoranti e lidi dove portare in vacanza il tuo amico</p>
+    <!-- Theme Inner Banner ____________________________ -->
+    <section class="">
+        <div class="them-inner-banner">
+            <div class="inner-banner-opact">
+                <div class="container">
+                    <div class="inner-banner-title">
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 col-md-12">
+                                <div class="">
+                                    <h1>Ricerca tra i nostri servizi quello che fa al caso tuo!</h1>
+                                    <p>Offriamo servizi di pet sitting e veterinari, ricerca hotel, ristoranti e lidi
+                                        dove portare in vacanza il tuo amico</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <br>
+    <div class="row col-md-10 col-md-offset-1" id="searchWrapper1">
+        <table>
+            <tr>
+                <td class="col-md-4">
+                    <form action="#">
+                        <input type="text" placeholder="Cerca per Città...">
+                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </td>
+                <td class="col-md-4">
+                    <form action="#">
+                        <input type="text" placeholder="Cerca per Provincia...">
+                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </td>
+                <td class="col-md-4">
+                    <form action="#">
+                        <input type="text" placeholder="Cerca per Regione...">
+                        <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </td>
+            </tr>
+        </table>
     </div>
-  </section>
-
-<br>
-    <div class="row col-md-offset-4">
-        <div class="container col-md-4" id="searchWrapper1">
-            <form action="#">
-                <input type="text" placeholder="Cerca per Città...">
-                <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-            <br>
-            <form action="#">
-                <input type="text" placeholder="Cerca per Provincia...">
-                <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-            <br>
-            <form action="#">
-                <input type="text" placeholder="Cerca per Regione...">
-                <button class="p-bg-color"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-    </div> <!-- /.search-box -->
-    </div>
 
 
-  <!-- Gallery V-2 ____________________________ -->
-  <section class="gallery-v-two">
-    <div class="container">
-      <div class="gallery-v-two-wrapper">
+    <!-- Gallery V-2 ____________________________ -->
+    <section class="gallery-v-two">
+        <div class="container">
+            <div class="gallery-v-two-wrapper">
 
-        <div class="isotop_menu">
-          <ul class="isotop-menu-wrapper text-center">
-            <li class="is-checked tran3s" data-filter="*">Tutti i servizi</li>
-            <li class="tran3s" data-filter=".hotel">Hotel</li>
-            <li class="tran3s" data-filter=".ristorante">Ristoranti</li>
-            <li class="tran3s" data-filter=".lido">Lidi</li>
-            <li class="tran3s" data-filter=".petsitter">Pet Sitter</li>
-            <li class="tran3s" data-filter=".veterinari">Veterinari</li>
-          </ul>
-        </div> <!-- End of .mixitUp_menu -->
+                <div class="isotop_menu">
+                    <ul class="isotop-menu-wrapper text-center">
+                        <li [routerLink]="['/inserzioni']">Tutti i servizi</li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/hotel']">Hotel</li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/ristorante']">Ristoranti
+                        </li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/lido']">Lidi</li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/parco']">Parchi</li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/pet']">Pet Sitter</li>
+                        <li routerLinkActive="is-checked tran3s" [routerLink]="['/inserzioni/veterinario']">Veterinari
+                        </li>
+                    </ul>
+                </div> <!-- End of .mixitUp_menu -->
 
-        <div class="gallery_item_wrapper row" id="isotop-gallery-wrapper">
-          <div class="grid-sizer"></div>
+                <div class="gallery_item_wrapper row" id="isotop-gallery-wrapper">
+                    <div class="grid-sizer"></div>
 
-          <!-- Single Item -->
+                    <!-- Single Item -->
 
-          <div *ngFor="let inserzione of inserzioni" class="isotop-item {{inserzione.tipoinserzione_id}}">
-            <div class="gallery-tiem-wrapper">
-              <img src="assets/images/gallery/img-10.jpg" alt="imsage">
-              <div class="gallery-item-opact">
-                <h5>{{inserzione.contenuto}}</h5>
-                <div>
-                  <a [routerLink]="['/inserzione',inserzione.id]" class="fancybox"><i class="flaticon-search"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End of .isotop-item -->
-        </div> <!-- End of .gallery_item_wrapper -->
-      </div> <!-- End of .WORK-item_wrapper -->
-    </div>
-  </section>
+                    <div *ngFor="let inserzione of inserzioni"
+                         class="col-md-6 isotop-item">
+                        <div class="gallery-tiem-wrapper">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'hotel'" src="assets/images/gallery/hotel.jpg"
+                                 style="height:380px" alt="imsge">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'ristorante'"
+                                 style="height:380px" src="assets/images/gallery/ristorante.jpg" alt="image">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'lido'" src="assets/images/gallery/lidi.jpg"
+                                 style="height:380px" alt="image">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'parco'" src="assets/images/gallery/parco.jpg"
+                                 style="height:380px" alt="image">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'pet'" src="assets/images/gallery/dogsitter.jpg"
+                                 style="height:380px"  alt="image">
+                            <img *ngIf="inserzione.tipoinserzione_id == 'veterinario'"
+                                 style="height:380px" src="assets/images/gallery/veterinario.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                                <h5>{{inserzione.contenuto}}</h5>
+                                <div>
+                                    <a [routerLink]="['/inserzione',inserzione.id]" class="fancybox"><i
+                                            class="flaticon-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of .isotop-item -->
+                </div> <!-- End of .gallery_item_wrapper -->
+            </div> <!-- End of .WORK-item_wrapper -->
+        </div>
+    </section>
 
 </div> <!-- /.main-page-wrapper -->
 

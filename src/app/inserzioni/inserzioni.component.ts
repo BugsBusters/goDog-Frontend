@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {InserzioniService} from "../service/inserzioni.service";
 import {UtenteService} from "../service/utente.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: 'app-inserzioni',
@@ -12,16 +12,29 @@ export class InserzioniComponent implements OnInit {
 
     public inserzioni: any [];
 
-    constructor(private inserzioniService: InserzioniService, public utenteService: UtenteService, private router: Router) {
+    constructor(private inserzioniService: InserzioniService, public utenteService: UtenteService,
+                private router: Router, private route: ActivatedRoute) {
     }
 
     ngOnInit() {
         if (this.utenteService.token !== 'defaultToken') {
-            this.inserzioniService.getInserzioni(this.utenteService.token)
-                .subscribe(
-                    (response) => this.inserzioni = response,
-                    (error) => console.log()
-                );
+            this.route.params.subscribe(
+                params => {
+                    if (params['tipo'] != null) {
+                        this.inserzioniService.getInserzioniByTipo(params['tipo'], this.utenteService.token)
+                            .subscribe(
+                                (response) => this.inserzioni = response,
+                                (error) => console.log()
+                            );
+                    } else {
+                        this.inserzioniService.getInserzioni(this.utenteService.token)
+                            .subscribe(
+                                (response) => this.inserzioni = response,
+                                (error) => console.log()
+                            );
+                    }
+                }
+            );
         }
         else {
             this.router.navigate(['login']);

@@ -17,7 +17,6 @@ export class InserzioniService {
             .map(
                 (response) => {
                     const data: any[] = response.json();
-                    console.log(data);
                     return data;
                 },
                 (error) => console.log(error)
@@ -30,6 +29,18 @@ export class InserzioniService {
                 (response) => {
                     const data: any = response.json();
                     console.log(data);
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+
+    getInserzioniByTipo(tipo,token)
+    {
+        return this.http.get(this.baseUrl + 'inserzioni/' + tipo + this.tokenUrl + token)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
                     return data;
                 },
                 (error) => console.log(error)
