@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InserzioniService} from "../service/inserzioni.service";
 
 @Component({
   selector: 'app-inserzioni',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InserzioniComponent implements OnInit {
 
-  constructor() { }
+  public inserzioni: any [];
+
+  constructor(private inserzioniService: InserzioniService) {
+  }
 
   ngOnInit() {
+    this.inserzioniService.getInserzioni()
+        .subscribe(
+            (response) => console.log(response),
+            (error) => console.log()
+        );
+
   }
 
 }

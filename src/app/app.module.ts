@@ -13,9 +13,11 @@ import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ListaUtentiComponent} from './lista-utenti/lista-utenti.component';
-
-import {UtenteService} from "./service/utente.service";
 import {PricelistComponent} from "./pricelist/pricelist.component";
+import {UtenteService} from "./service/utente.service";
+import {InserzioniComponent} from "./inserzioni/inserzioni.component";
+
+
 
 
 const routes: Routes = [
@@ -43,6 +45,10 @@ const routes: Routes = [
         path: 'registrazione/:tipo/:piano',
         component: SignUpComponent
     },
+    {
+        path: 'inserzioni',
+        component: InserzioniComponent
+    }
 ];
 
 @NgModule({
@@ -56,7 +62,8 @@ const routes: Routes = [
         IndexComponent,
         FooterComponent,
         ListaUtentiComponent,
-        PricelistComponent
+        PricelistComponent,
+        InserzioniComponent
 
     ],
     imports: [
