@@ -29,10 +29,6 @@ export class SignUpComponent implements OnInit {
                 this.tipo = params['tipo'];
                 this.piano = params['piano'];
             });
-        this.utenteService.getUtenti()
-            .subscribe(
-                (response) => console.log(response)
-            );
     }
 
     onSubmit(form) {

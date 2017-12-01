@@ -50,11 +50,11 @@
         <div class="isotop_menu">
           <ul class="isotop-menu-wrapper text-center">
             <li class="is-checked tran3s" data-filter="*">Tutti i servizi</li>
-            <li class="tran3s" data-filter=".SmallPets">Hotel</li>
-            <li class="tran3s" data-filter=".Adoption">Ristoranti</li>
-            <li class="tran3s" data-filter=".Adoption">Lidi</li>
-            <li class="tran3s" data-filter=".PetHealth">Pet Sitter</li>
-            <li class="tran3s" data-filter=".AnimalCare">Veterinari</li>
+            <li class="tran3s" data-filter=".hotel">Hotel</li>
+            <li class="tran3s" data-filter=".ristorante">Ristoranti</li>
+            <li class="tran3s" data-filter=".lido">Lidi</li>
+            <li class="tran3s" data-filter=".petsitter">Pet Sitter</li>
+            <li class="tran3s" data-filter=".veterinari">Veterinari</li>
           </ul>
         </div> <!-- End of .mixitUp_menu -->
 
@@ -63,14 +63,13 @@
 
           <!-- Single Item -->
 
-          <div *ngFor="" class="isotop-item SmallPets ">
+          <div *ngFor="let inserzione of inserzioni" class="isotop-item {{inserzione.tipoinserzione_id}}">
             <div class="gallery-tiem-wrapper">
               <img src="assets/images/gallery/img-10.jpg" alt="imsage">
               <div class="gallery-item-opact">
-                <h5></h5>
+                <h5>{{inserzione.contenuto}}</h5>
                 <div>
-                  <a href="assets/images/gallery/img-10.jpg" class="fancybox"><i class="flaticon-search"></i></a>
-                  <a href="assets/images/gallery/img-10.jpg" class="fancybox"><i class="flaticon-unlink"></i></a>
+                  <a [routerLink]="['/inserzione',inserzione.id]" class="fancybox"><i class="flaticon-search"></i></a>
                 </div>
               </div>
             </div>

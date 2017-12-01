@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav">
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="">Home</a></li>
 
-              <li><a routerLink="inserzioni">Inserzioni</a></li>
+              <li *ngIf="isLogged"><a routerLink="inserzioni">Inserzioni</a></li>
 
               <li><a routerLink="amico-smarrito">Il tuo amico smarrito</a>
                 <!--<ul class="sub-menu">-->
@@ -50,7 +50,8 @@
 
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="contatti">Contatti</a></li>
               <li routerLinkActive="active current-page-item Active-manu"><a routerLink="registrazione">Registrati</a></li>
-              <li routerLinkActive="active current-page-item Active-manu"><a routerLink = "login">Login</a></li>
+              <li *ngIf="!isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink = "login">Login</a></li>
+              <li *ngIf="isLogged" routerLinkActive="active current-page-item Active-manu"><a routerLink = "logout">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </nav>
