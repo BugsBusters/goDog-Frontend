@@ -23,6 +23,7 @@ import {RecensioneService} from "./service/recensione.service";
 import {AmicosmarritoComponent} from './amicosmarrito/amicosmarrito.component';
 import {AmicoService} from "./service/amico.service";
 import {AmicismarritiComponent} from './amicismarriti/amicismarriti.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -85,6 +86,10 @@ const routes: Routes = [
     {
         path: 'logout',
         component: LogoutComponent
+    },
+    {
+        path: 'home',
+        component: HomeComponent
     }
 ];
 
@@ -104,7 +109,8 @@ const routes: Routes = [
         LogoutComponent,
         InserzioneComponent,
         AmicosmarritoComponent,
-        AmicismarritiComponent
+        AmicismarritiComponent,
+        HomeComponent
 
     ],
     imports: [
