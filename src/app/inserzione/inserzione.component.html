@@ -1,0 +1,58 @@
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-md-offset-1 col-lg-offset-1 col-xs-12">
+            <div class="Blog-list-item-wrapper">
+                <div class="list-item blog-details-top-item-wrapper">
+                    <div class="item-img">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'hotel'" src="assets/images/gallery/hotel.jpg"
+                             alt="imsge">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'ristorante'"
+                             src="assets/images/gallery/ristorante.jpg" alt="image">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'lido'" src="assets/images/gallery/lidi.jpg"
+                            alt="image">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'parco'" src="assets/images/gallery/parco.jpg"
+                              alt="image">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'pet'" src="assets/images/gallery/dogsitter.jpg"
+                              alt="image">
+                        <img *ngIf="inserzione.tipoinserzione_id == 'veterinario'"
+                              src="assets/images/gallery/veterinario.jpg" alt="image">
+                        <span>{{inserzione.updated_at.substr(0,10)}}</span>
+                    </div>
+                    <div class="blog-details-top-item-text">
+                        <h3>{{inserzione.titolo}}</h3>
+                        <i>Post by <span>Tizio</span> in {{inserzione.tipoinserzione_id}}</i>
+                        <p>
+                            {{inserzione.contenuto}}
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-details-comments-section">
+                    <h5>Recensioni</h5>
+                    <span></span>
+                    <ul>
+                        <li *ngFor="let recensione of recensioni">
+                            <div>
+                                <img src="assets/images/blog/4.jpg" alt="image">
+                                <h5><a href="#">Mario rossi</a></h5>
+                                <span>{{recensione.created_at}}</span>
+                                <p>
+                                    {{recensione.commento}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog-details-leave-a-comment">
+                    <h5>Lascia una recensione</h5>
+                    <span></span>
+                    <form action="#" class="clear-fix">
+                        <textarea placeholder="Recensione"></textarea>
+                        <button class="hvr-float-shadow">Inserisci Recensione</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

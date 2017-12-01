@@ -13,12 +13,16 @@ import {IndexComponent} from './index/index.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ListaUtentiComponent} from './lista-utenti/lista-utenti.component';
-import {PricelistComponent} from './pricelist/pricelist.component';
-import {UtenteService} from './service/utente.service';
-import {InserzioniComponent} from './inserzioni/inserzioni.component';
-import {InserzioniService} from './service/inserzioni.service';
-
-
+import {PricelistComponent} from "./pricelist/pricelist.component";
+import {UtenteService} from "./service/utente.service";
+import {InserzioniComponent} from "./inserzioni/inserzioni.component";
+import {InserzioniService} from "./service/inserzioni.service";
+import {LogoutComponent} from './logout/logout.component';
+import {InserzioneComponent} from './inserzione/inserzione.component';
+import {RecensioneService} from "./service/recensione.service";
+import {AmicosmarritoComponent} from './amicosmarrito/amicosmarrito.component';
+import {AmicoService} from "./service/amico.service";
+import {AmicismarritiComponent} from './amicismarriti/amicismarriti.component';
 
 
 
@@ -50,6 +54,38 @@ const routes: Routes = [
     {
         path: 'inserzioni',
         component: InserzioniComponent
+    },
+    {
+        path: 'inserzioni/:tipo',
+        component: InserzioniComponent,
+    },
+    {
+        path: 'inserzione/:id',
+        component: InserzioneComponent
+    },
+    {
+        path: 'inserzione/:citta',
+        component: InserzioneComponent
+    },
+    {
+        path: 'inserzione/:provincia',
+        component: InserzioneComponent
+    },
+    {
+        path: 'inserzione/:regione',
+        component: InserzioneComponent
+    },
+    {
+        path: 'amico-smarrito',
+        component: AmicismarritiComponent
+    },
+    {
+        path: 'amico-smarrito/:id',
+        component: AmicosmarritoComponent
+    },
+    {
+        path: 'logout',
+        component: LogoutComponent
     }
 ];
 
@@ -65,7 +101,11 @@ const routes: Routes = [
         FooterComponent,
         ListaUtentiComponent,
         PricelistComponent,
-        InserzioniComponent
+        InserzioniComponent,
+        LogoutComponent,
+        InserzioneComponent,
+        AmicosmarritoComponent,
+        AmicismarritiComponent
 
     ],
     imports: [
@@ -76,7 +116,9 @@ const routes: Routes = [
     ],
     providers: [
         UtenteService,
-        InserzioniService
+        InserzioniService,
+        RecensioneService,
+        AmicoService
     ],
     bootstrap: [AppComponent]
 })

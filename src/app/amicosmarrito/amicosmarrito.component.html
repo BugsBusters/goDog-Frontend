@@ -1,0 +1,48 @@
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-md-offset-1 col-lg-offset-1 col-xs-12">
+            <div class="Blog-list-item-wrapper">
+                <div class="list-item blog-details-top-item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/gallery/doggo.jpg"
+                             alt="imsge">
+                        <span>{{amico.updated_at.substr(0,10)}}</span>
+                    </div>
+                    <div class="blog-details-top-item-text">
+                        <h3>{{amico.titolo}}</h3>
+                        <i>Post by <span>Tizio</span> in {{amico.tipoinserzione_id}}</i>
+                        <p>
+                            {{amico.contenuto}}
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-details-comments-section">
+                    <h5>Recensioni</h5>
+                    <span></span>
+                    <ul>
+                        <li *ngFor="let recensione of recensioni">
+                            <div>
+                                <img src="assets/images/blog/4.jpg" alt="image">
+                                <h5><a href="#">Mario rossi</a></h5>
+                                <span>{{recensione.created_at}}</span>
+                                <p>
+                                    {{recensione.commento}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog-details-leave-a-comment">
+                    <h5>Segnala un avvistamento</h5>
+                    <span></span>
+                    <form action="#" class="clear-fix">
+                        <input placeholder="posizione">
+                        <button class="hvr-float-shadow">Inserisci posizione</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

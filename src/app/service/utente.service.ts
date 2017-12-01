@@ -4,16 +4,19 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class UtenteService {
-    public token : string;
+    public token: string = "defaultToken";
     public headers;
     private baseUrl = 'http://193.205.129.103/backend/api/';
+    private tokenUrl = '?api_token=';
+
+
 
     constructor(private http: Http) {
     }
 
 
     getUtenti() {
-        return this.http.get(this.baseUrl + 'utenti')
+        return this.http.get(this.baseUrl + 'utenti' + this.tokenUrl + this.token)
             .map(
                 (response) => {
                     const data: any[] = response.json();
@@ -33,4 +36,5 @@ export class UtenteService {
         this.headers.append('Content-Type', 'application/json: charset=utf-8');
         return this.http.post(this.baseUrl + 'login', utente, this.headers);
     }
+
 }

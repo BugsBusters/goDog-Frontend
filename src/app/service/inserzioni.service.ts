@@ -9,16 +9,41 @@ export class InserzioniService {
     private baseUrl = 'http://193.205.129.103/backend/api/';
     private tokenUrl = '?api_token=';
 
-  constructor(private http: Http) { }
+    constructor(private http: Http) {
+    }
 
-  getInserzioni(token) {
-   return this.http.get(this.baseUrl + 'inserzioni')
-        .map(
-            (response) => {
-                const data: any[] = response.json();
-                return data;
-            },
-            (error) => console.log(error)
-        );
-  }
+    getInserzioni(token) {
+        return this.http.get(this.baseUrl + 'inserzioni' + this.tokenUrl + token)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+
+    getInserzioneById(id, token) {
+        return this.http.get(this.baseUrl + 'inserzione/' + id + this.tokenUrl + token)
+            .map(
+                (response) => {
+                    const data: any = response.json();
+                    console.log(data);
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
+
+    getInserzioniByTipo(tipo,token)
+    {
+        return this.http.get(this.baseUrl + 'inserzioni/' + tipo + this.tokenUrl + token)
+            .map(
+                (response) => {
+                    const data: any[] = response.json();
+                    return data;
+                },
+                (error) => console.log(error)
+            );
+    }
 }

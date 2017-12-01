@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {UtenteService} from "../service/utente.service";
+
 
 @Component({
     selector: 'app-login',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
         password: '',
     };
 
-    public utente : any;
+    public utente: any;
+
+
 
     constructor(private utenteService: UtenteService) {
     }
@@ -24,7 +27,6 @@ export class LoginComponent implements OnInit {
     onSubmit(formData) {
         this.credenziali.email = formData.value.email;
         this.credenziali.password = formData.value.password;
-        console.log(this.credenziali)
         this.utenteService.login(this.credenziali)
             .subscribe(
                 (response) => {
